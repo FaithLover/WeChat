@@ -1,2 +1,11 @@
 <!--index.wxml-->
-<view class="container">初始化项目</view>
+<view>这是初始化项目</view> 
+ <icon type="success" size="50" color="red"></icon> 
+ <view wx:for="{{iconType}}"> 
+ <icon type="{{item}}"></icon> 
+ </view> 
+ <view> 
+ 进度条<progress percent="20" show-info border-radius="50" font-size="30" stroke-width="12" color="red" activeColor="blue" backgroundColor="red" active active-mode="forwards"></progress> 
+ </view> 
+ <rich-text><a>aaa</ a></rich-text>  
+ <text>看得见啊睡大街看</text> 
