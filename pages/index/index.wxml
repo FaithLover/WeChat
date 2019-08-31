@@ -1,2 +1,12 @@
 <!--index.wxml-->
-<view class="container">初始化项目</view>
+<scroll-view class="container" scroll-y scroll-top="100">
+<view wx:for = "{{10}}" class="box">
+   {{item}}
+</view>
+</scroll-view>
+
+<scroll-view class="container2" scroll-x>
+<view wx:for = "{{10}}" class="box2">
+   {{item}}
+</view>
+</scroll-view>
