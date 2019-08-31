@@ -1,1 +1,19 @@
 /**index.wxss**/
+.box{color: blue}
+swiper{
+  width: 80%;
+  margin: 0 auto;
+  margin-top: 20%;
+  padding-top: 25px;
+}
+.wrap{
+  display: flex;
+  justify-content: space-around;
+  margin-top: 25px;
+}
+.wrap-swiper{
+  background: rgba(0,0,0, 0.1) ;
+  padding-bottom: 25px;
+  margin-left: 15px;
+  margin-right: 15px;
+}
