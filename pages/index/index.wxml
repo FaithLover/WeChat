@@ -1,2 +1,8 @@
 <!--index.wxml-->
-<view class="container">初始化项目</view>
+<view>{{message}}</view>
+<view>{{firstname}} {{lastname}}</view>
+<view>{{firstname+ '' +lastname}}</view>
+<view>{{age >=18 ? '成年人':'未成年'}}</view>
+<view>{{nowtime}}</view>
+<button size="mini" bindtap="switchColor">切换颜色</button>
+<view class='box {{isAcitve ? "active" : ""}}'>哈哈哈哈</view>

@@ -1,1 +1,3 @@
 /**index.wxss**/
+.box{font-size: 60rpx}
+.active{color: red}
