@@ -1,2 +1,31 @@
 <!--index.wxml-->
-<view class="container">初始化项目</view>
+<button size="mini">小按钮</button>
+<button type="primary">样式类型</button>
+<button type="warn" plain>样式类型plain将去掉背景</button>
+<button disabled loading>禁用，loading转圈圈图标</button>
+<button form-type="submit">提交 仅限form组件里面</button>
+<button form-type="reset">重置 仅限form组件里面</button>
+<button open-type="contact">进入客服</button>
+<button open-type="share">转发</button>
+<button open-type="openSetting">授权</button>
+<button open-type="feedback">feedback</button>
+<button hover-class="abc">点击效果</button>
+
+<checkbox>单选</checkbox>
+<checkbox-group bindchange="checkboxChange">
+  <label class="checkbox" wx:for="{{items}}">
+    <checkbox value="{{item.name}}" checked="{{item.checked}}"/>{{item.value}}
+  </label>
+</checkbox-group>
+
+<editor
+  id="editor"
+  class="ql-container"
+  placeholder="{{placeholder}}"
+  showImgSize
+  showImgToolbar
+  showImgResize
+  bindstatuschange="onStatusChange"
+  read-only="{{readOnly}}"
+  bindready="onEditorReady">
+</editor>
