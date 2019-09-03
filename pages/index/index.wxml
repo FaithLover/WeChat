@@ -1,2 +1,18 @@
 <!--index.wxml-->
 <view class="container">初始化项目</view>
+<include src="../logs/logs.wxml"/>
+<button size="mini" bindtap="showtime">切换显示</button>
+<view wx:if="{{isshow}}">哈哈哈哈</view>
+
+<view wx:if="{{num>=90}}">优秀</view>
+<view wx:elif="{{num>=80}}">良好</view>
+<view wx:elif="{{num>=60}}">及格</view>
+<view wx:else>不及格</view>
+<button bindtap="addNum">增加6分</button>
+
+<!-- include不能导入组件 -->
+<import src = "../tmp/tmp.wxml"/>
+
+<template is="contentItem" data="{{btntext:'按钮',content:'哈哈哈哈哈'}}"/>
+<template is="contentItem" data="{{btntext:'警告',content:'哈哈哈哈哈'}}"/>
+<template is="contentItem" data="{{btntext:'擦擦',content:'哈哈哈哈哈'}}"/>

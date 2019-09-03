@@ -1,0 +1,5 @@
+<!--pages/tmp/tmp.wxml-->
+<template name="contentItem">
+  <button size="mini">{{btntext}}</button>
+  <view>{{content}}</view>
+</template>
