@@ -1,2 +1,50 @@
 <!--index.wxml-->
 <view class="container">初始化项目</view>
+
+
+<!-- 第一种方法 -->
+<!-- wxs的使用 -->
+<!-- <wxs module="abc">
+    function priceFormat(price,number){
+    var number = number || 2
+    return price.toFixed(number)
+  }
+  module.exports = {
+    priceFormat:priceFormat
+  }
+</wxs> -->
+<!-- 第二种方法 -->
+<wxs src="../../wxs/format.wxs" module = "format"/>
+
+<view>{{format.priceFormat(price,2)}}</view>
+<view>{{format.dateFormat(time)}}</view>
+
+<!-- 常见的事件类型 -->
+<view class="box" bindtouchstart="handleTouchStart"
+bindtouchmove="handleTouchMove"
+bindtouchend="handleTouchEnd"
+bindtap="handleTap"
+bindlongpress="handleLongPress"></view>
+
+<!-- 给for循环的item和index换一个名字 -->
+<!-- <view wx:for="{{titles}}" wx:for-item="aa" wx:for-index="i"></view> -->
+
+<!-- 传递数据设置data-“ ” -->
+<view class="con">
+  <block wx:for="{{titles}}" wx:key="{{index}}">
+      <view bindtap="getVal" class="item" data-index="{{index}}" data-item="{{item}}">{{item}}</view>
+  </block>
+</view>
+
+<!-- 捕获流事件 从内到外 -->
+<!-- <view class="box1" capture-bind:tap="box1">
+  <view class="box2" capture-bind:tap="box2">
+    <view class="box3" capture-bind:tap="box3"></view>
+  </view>
+</view> -->
+<!-- 冒泡流事件 从外到内 -->
+<view class="box1" bind:tap="box1">
+  <view class="box2" catch:tap="box2">
+    <view class="box3" bind:tap="box3"></view>
+  </view>
+</view>

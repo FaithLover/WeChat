@@ -1,0 +1,19 @@
+function priceFormat(price,number){
+  var number = number || 2
+  var f_price = parseFloat(price)
+  return f_price.toFixed(number)
+}
+function dateFormat(timestamp){
+  var date = getDate(timestamp * 1000);//时间戳为10位需*1000
+  var Y = date.getFullYear() + '-';
+  var M = (date.getMonth() + 1 < 10 ? '0' + (date.getMonth() + 1) : date.getMonth() + 1) + '-';
+  var D = date.getDate() + ' ';
+  var h = date.getHours() + ':';
+  var m = date.getMinutes() + ':';
+  var s = date.getSeconds();
+  return Y + M + D + h + m + s;
+}
+module.exports = {
+  priceFormat: priceFormat,
+  dateFormat: dateFormat
+}
