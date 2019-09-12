@@ -1,3 +1,8 @@
 {
-  "usingComponents": {}
+  "usingComponents": {
+    "children":"../../components/children/children",
+    "event":"../../components/event/event",
+    "w-tabbar":"../../components/w-tabbar/w-tabbar",
+    "my-sel": "../../components/my-sel/my-sel"
+  }
 }

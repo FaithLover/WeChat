@@ -1,2 +1,20 @@
 <!--index.wxml-->
 <view class="container">初始化项目</view>
+
+<!-- 传递数据,和children.js相关 -->
+<children title="哈哈哈哈哈哈"/>
+
+<!-- 样式传递,index.wxss要先预设class为.red的样式 -->
+<!-- 再配置chlidren的wxml和js文件 -->
+<children titleclass="red"></children>
+
+<view>当前总数:{{counter}}</view>
+<!-- 事件传递数据,先在子组件事件中 this.triggerEvent() 再绑定 index中的事件 -->
+<event bind:add="handleAdd"/>
+
+<w-tabbar titles="{{['衣服','鞋子','裤子','电器']}}" bind:itemclick="tabbarClick"/>
+
+
+<!-- 在子组件内写好方法函数，然后在index.js调用该组件写好的方法函数 -->
+<button size="mini" bind:tap="update">修改下面组件的总数</button>
+<my-sel  id="sel_id"/>

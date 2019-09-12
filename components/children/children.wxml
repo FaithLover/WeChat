@@ -1,0 +1,4 @@
+<!--components/children.wxml-->
+<text>components/children.wxml</text>
+<view class="titleclass">我是子组件</view>
+<view>{{title}}</view>

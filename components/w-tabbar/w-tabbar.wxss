@@ -1,0 +1,5 @@
+/* components/w-tabbar/w-tabbar.wxss */
+.container{display: flex;}
+.tab-item{flex: 1;text-align: center}
+.active{color: red}
+.active text{border-bottom: 6rpx solid red;padding: 20rpx 15rpx}
