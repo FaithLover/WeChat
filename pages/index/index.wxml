@@ -1,2 +1,15 @@
 <!--index.wxml-->
-<view class="container">初始化项目</view>
+<!-- 插槽能够动态替换中间部分组件 -->
+<!-- 单个插槽 -->
+<my-slot>
+    <button size="mini">单插槽</button>
+</my-slot>
+<!-- 多个插槽 -->
+<!-- 多个插槽情况下，需要在子组件的js内，添加options这个属性：multipleSlots:true 才能正常显示 -->
+<!-- 多个插槽需要在子组件内给插槽添加： name 属性 进行区分-->
+<!-- 多个插槽下不会因调用时的排序改变而改变 -->
+<my-slots>
+    <button size="mini" slot="slot2">多插槽排序第二</button>
+    <button size="mini" slot="slot1">多插槽排序第一</button>
+    <button size="mini" slot="slot3">多插槽排序第三</button>
+</my-slots>

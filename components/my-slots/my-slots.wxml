@@ -1,0 +1,6 @@
+<!--components/my-slots/my-slots.wxml-->
+<view>我是多插槽头部</view>
+<view><slot name="slot1"/></view>
+<view><slot name="slot2"/></view>
+<view><slot name="slot3"/></view>
+<view>我是多插槽底部</view>
