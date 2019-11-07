@@ -1,2 +1,7 @@
 <!--index.wxml-->
 <view class="container">初始化项目</view>
+<button size="mini" bind:tap="hiddenTotast">showTotast</button>
+<button size="mini" bind:tap="hiddenModel">showModel</button>
+<button size="mini" bind:tap="hiddenLoading">showLoading</button>
+<button size="mini" bind:tap="hiddenAction">showAction</button>
+<button size="mini" open-type="share">分享</button>
