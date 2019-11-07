@@ -1,2 +1,21 @@
 <!--index.wxml-->
 <view class="container">初始化项目</view>
+
+<navigator url='/pages/about/about'>
+跳转到about页面(能返回)
+</navigator>
+<navigator url='/pages/about/about' open-type="redirect">
+跳转到about页面(redirect，不能返回)
+</navigator>
+<navigator url='/pages/logs/logs' open-type="switchTab">
+跳转到logs页面(switchTab导航栏，tabar页面)
+</navigator>
+
+
+<!-- 跳转页面数据传递 -->
+<navigator url='/pages/about/about?name=why&age=12'>
+跳转到about页面(传递数据)
+</navigator>
+<view>{{title}}</view>
+<!-- 函数跳转页面 -->
+<button size="mini" bind:tap="handleAbout">跳转到about页面</button>
